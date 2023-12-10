@@ -32,3 +32,5 @@ Declare getPlayerChoice function{
         
 }
 */
+
+const options = ["Rock", "Paper", "Scissors"]
