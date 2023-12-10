@@ -39,3 +39,21 @@ function getComputerChoice(){
     const choiceIndex = Math.floor(Math.random() * 3)
     return options[choiceIndex]
 }
+
+function getPlayerChoice() {
+    while(1){
+        let playerChoice = prompt(`Please write to select: "Rock", "Paper" or "Scissors"`)
+        
+        if(playerChoice != null){
+            playerChoice = playerChoice.toLowerCase().split('')
+            let firstLetter = playerChoice[0].toUpperCase()
+            playerChoice[0] = firstLetter
+            playerChoice = playerChoice.join('')
+        }
+        if(options.includes(playerChoice)) {
+            return playerChoice
+        } else {
+            alert("Looks like your input was incorrect, please try again!")
+        }
+    }
+}
