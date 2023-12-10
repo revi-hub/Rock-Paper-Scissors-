@@ -74,3 +74,27 @@ function getPlayerChoice() {
         }
     }
 }
+
+function playRound(playerSelection, computerSelection){
+    if(playerSelection === computerSelection){
+        return "Tie"
+    }
+    else if(playerSelection == "Paper" && computerSelection == "Rock"){
+        return "Win"
+    }
+    else if(playerSelection == "Rock" && computerSelection == "Paper"){
+        return "Lose"
+    }
+    else if(playerSelection == "Rock" && computerSelection == "Scissors"){
+        return "Win"
+    }
+    else if(playerSelection == "Scissors" && computerSelection == "Rock"){
+        return "Lose"
+    }
+    else if(playerSelection == "Scissors" && computerSelection == "Paper"){
+        return "Win"
+    }
+    else if(playerSelection == "Paper" && computerSelection == "Scissors"){
+        return "Lose"
+    }
+}
