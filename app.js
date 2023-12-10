@@ -34,3 +34,8 @@ Declare getPlayerChoice function{
 */
 
 const options = ["Rock", "Paper", "Scissors"]
+
+function getComputerChoice(){
+    const choiceIndex = Math.floor(Math.random() * 3)
+    return options[choiceIndex]
+}
