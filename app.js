@@ -48,6 +48,28 @@ Declare playRound function that takes two parameters: playerSelection and comput
     else if playerSelection is "Paper" and computerSelection is "Scissors" then
         return "Lose"
 }
+
+Declare game function{
+    Initialize playerWins counter to 0
+    Initialize computerWins counter to 0
+    Initialize counter variable to 0
+    Loop that runs until counter is less than 5{
+        Initialize playerChoice variable to getPlayerChoice()
+        Initialize computerChoice variable to getComputerChoice()
+        Initialize roundResult to playRound function with playerChoice and computerChoice as it's parameters
+        Message player with what shape both the player and the computer picked and what result of the round is
+        if roundResult is `Lose` then
+            computerWins increments by one
+        if roundResult is `Win` then
+            playerWins increments by one
+    }
+    If playerWins is higher than computerWins then
+        Message player that he won and display how many rounds he won and lost
+    Else if playerWins is less than computerWins then
+        Message player that he lost and display how many rounds he won and lost
+    Else
+        Message player that it's a tie
+}
 */
 
 const options = ["Rock", "Paper", "Scissors"]
