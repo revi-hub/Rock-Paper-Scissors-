@@ -31,6 +31,23 @@ Declare getPlayerChoice function{
     }
         
 }
+
+Declare playRound function that takes two parameters: playerSelection and computerSelection{
+    if playerSelection equals computerSelection then
+        return "Tie"
+    else if playerSelection is "Paper" and computerSelection is "Rock" then
+        return "Win"
+    else if playerSelection is "Rock" and computerSelection is "Paper" then
+        return "Lose"
+    else if playerSelection is "Rock" and computerSelection is "Scissors" then
+        return "Win"
+    else if playerSelection is "Scissors" and computerSelection is "Rock" then
+        return "Lose"
+    else if playerSelection is "Scissors" and computerSelection is "Paper" then
+        return "Win"
+    else if playerSelection is "Paper" and computerSelection is "Scissors" then
+        return "Lose"
+}
 */
 
 const options = ["Rock", "Paper", "Scissors"]
@@ -43,7 +60,7 @@ function getComputerChoice(){
 function getPlayerChoice() {
     while(1){
         let playerChoice = prompt(`Please write to select: "Rock", "Paper" or "Scissors"`)
-        
+
         if(playerChoice != null){
             playerChoice = playerChoice.toLowerCase().split('')
             let firstLetter = playerChoice[0].toUpperCase()
